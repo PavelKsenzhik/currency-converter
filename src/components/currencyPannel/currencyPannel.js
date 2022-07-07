@@ -11,11 +11,11 @@ import "flatpickr/dist/themes/material_red.css";
 import './currencyPannel.scss'
 
 import { loadRates, setDay } from '../../redux/actions'
-import { daySelector, rateSelector, ratesLoadedSelector, ratesLoadingSelector, ratesSelector} from "../../redux/selectors";
+import { activeRatesSelector, daySelector, rateSelector, ratesLoadedSelector, ratesLoadingSelector, ratesSelector} from "../../redux/selectors";
 
 let count = 0;
 
-function CurrencyPannel({ loadRates, setDay, loading, loaded, rates, day, rate }) {
+function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, activeRates }) {
 
     const today = new Date().setHours(0,0,0,0);
     const [currAmount, setCurrAmout] = useState(1);
@@ -35,7 +35,7 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, rates, day, rate }
         if(loaded) loadRates()
     },[day])
 
-    console.log(`${++count} render`);
+    // console.log(`${++count} render`);
     if(loading) return <Loader />;
     if(!loaded) return 'No data =(';
 
@@ -64,12 +64,11 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, rates, day, rate }
             <h1 className="currency-pannel__title">Калькулятор валют</h1>
             <div className="currency-pannel__items">
                 <div className="currency-pannel__item">
-                    Рубли
                     <AbbrPicker />
                     <CountPicker value={bynAmount} setter={handleBynAmountChange}/>
                 </div>
                 <div className="currency-pannel__item">
-                    <AbbrPicker />
+                    <AbbrPicker rates={activeRates}/>
                     <CountPicker value={currAmount} setter={handleCurrAmountChange}/>
                 </div>
             </div>
@@ -97,9 +96,9 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, rates, day, rate }
 const mapStateToProps = (state) => ({
     loading: ratesLoadingSelector(state),
     loaded: ratesLoadedSelector(state), 
-    rates: ratesSelector(state),
     day: daySelector(state),
     rate: rateSelector(state),
+    activeRates: activeRatesSelector(state),
 })
 
 const mapDispatchToProps = (dispatch) => ({

@@ -1,11 +1,14 @@
-import { SET_DAY } from "../constants"
+import { SET_DAY } from "../constants";
 
-export default (state = new Date(), action) => {
+import formatDate from "../../hooks/formatDate";
+
+export default (state = formatDate(new Date()), action) => {
     const { type, day } = action;
+    const date = formatDate(day)
 
     switch(type){
         case SET_DAY: 
-            return day
+            return date
         default:
             return state
     }

@@ -1,5 +1,5 @@
 
-function AbbrPicker() {
+function AbbrPicker({ rates }) {
     return (
         <div className="abbrPicker">
             <input type="text"  placeholder="Выберите валюту"/>

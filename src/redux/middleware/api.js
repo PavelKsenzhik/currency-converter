@@ -7,11 +7,8 @@ export default (store) => (next) => async (action) => {
 
   const { CallAPI, type, ...rest } = action;
 
-  // Format date for API request
-  const date = daySelector(store.getState());
-  const month = date.getMonth().toString().length === 1 ? `0${date.getMonth() + 1}` : `${date.getMonth() + 1 }`;
-  const fullDay = date.getDate().toString().length === 1 ? `0${date.getDate()}` : `${date.getDate()}`;
-  const day = `${date.getFullYear()}-${month}-${fullDay}T00:00:00`;
+  // Memoization 
+  const day = daySelector(store.getState())
   
   if (store.getState().rates.entities.hasOwnProperty(day)) {
     const rate = store.getState().rates.entities[day].USD.Cur_OfficialRate;
