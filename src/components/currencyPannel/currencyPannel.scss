@@ -1,0 +1,65 @@
+@import '../app/vars.scss';
+
+.currency-pannel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    &__title{
+        width: 100%;
+    }
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        margin: 0px 16px;
+    }
+}
+
+
+.flatpickr-input {
+	display: none;
+}
+
+.flatpickr{
+    &-months &-month,
+    &-weekdays,
+    &-weekday{
+        background-color: $main-color;
+    }
+    &-weekday{
+        color: #fff;
+    }
+    &-current-month &-monthDropdown-months,
+    &-current-month &-monthDropdown-months &-monthDropdown-month{
+        background-color: $main-color;
+    }
+    &-monthDropdown-mont{
+        color: #fff;
+    }
+
+}
+span.flatpickr-weekday{
+    color: #fff;
+    background-color: $main-color;
+}
+.flatpickr-day.selected {
+	background-color: $main-color;
+    border: none;
+	&:hover {
+		background-color: $main-color;
+	}
+}
+.flatpickr-day.selected.nextMonthDay{
+    background-color: $main-color;
+}
+.flatpickr-day {
+	&:hover {
+		background-color: $main-color;
+		color: #fff;
+	}
+}
+.flatpickr-day.flatpickr-disabled{
+    color: rgba(52, 52, 52, 0.221)
+}

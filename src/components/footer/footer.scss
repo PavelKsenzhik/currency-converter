@@ -1,0 +1,13 @@
+@import '../app/vars.scss';
+
+.footer{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-color;
+    &__title{
+        color: $footer-color;
+    }
+}
