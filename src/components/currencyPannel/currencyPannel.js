@@ -36,7 +36,7 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, activeR
 
     useEffect(() =>{
         if(loaded) loadRates()
-    },[day, loaded, loadRates])
+    },[day, loadRates])
 
     console.log(`${++count} render`);
     if(loading) return <Loader />;
