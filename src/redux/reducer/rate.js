@@ -1,6 +1,6 @@
 import { SET_RATE } from "../constants";
 
-export default (state = 1, action) => {
+const rate = (state = 1, action) => {
     const { type, rate } = action;
     switch (type) {
         case SET_RATE:
@@ -9,3 +9,5 @@ export default (state = 1, action) => {
             return state;
     }
 }
+
+export default rate;

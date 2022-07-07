@@ -11,8 +11,10 @@ import "flatpickr/dist/themes/material_red.css";
 import './currencyPannel.scss'
 
 import { loadRates, setDay } from '../../redux/actions'
-import { activeRatesSelector, daySelector, rateSelector, ratesLoadedSelector, ratesLoadingSelector, ratesSelector} from "../../redux/selectors";
+import { activeRatesSelector, daySelector, rateSelector, ratesLoadedSelector, ratesLoadingSelector } from "../../redux/selectors";
 
+
+// DEV ONLY
 let count = 0;
 
 function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, activeRates }) {
@@ -23,7 +25,8 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, activeR
     
     useEffect(() =>{
         if(!loading && !loaded) loadRates()
-    }, [rate])
+    }, [loading, loaded, loadRates])
+
 
     useEffect(() =>{
         if(!!rate){
@@ -33,9 +36,9 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, activeR
 
     useEffect(() =>{
         if(loaded) loadRates()
-    },[day])
+    },[day, loaded, loadRates])
 
-    // console.log(`${++count} render`);
+    console.log(`${++count} render`);
     if(loading) return <Loader />;
     if(!loaded) return 'No data =(';
 

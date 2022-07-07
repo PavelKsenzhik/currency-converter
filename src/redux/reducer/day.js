@@ -2,7 +2,7 @@ import { SET_DAY } from "../constants";
 
 import formatDate from "../../hooks/formatDate";
 
-export default (state = formatDate(new Date()), action) => {
+const day = (state = formatDate(new Date()), action) => {
     const { type, day } = action;
     const date = formatDate(day)
 
@@ -13,3 +13,5 @@ export default (state = formatDate(new Date()), action) => {
             return state
     }
 }
+
+export default day;

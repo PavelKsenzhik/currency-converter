@@ -1,8 +1,8 @@
-import { setDay, setRate } from '../actions';
+import { setRate } from '../actions';
 import { FAILURE, REQUEST, SUCCESS } from '../constants';
 import { daySelector } from '../selectors';
 
-export default (store) => (next) => async (action) => {
+const api = (store) => (next) => async (action) => {
   if (!action.CallAPI) return next(action);
 
   const { CallAPI, type, ...rest } = action;
@@ -27,3 +27,5 @@ export default (store) => (next) => async (action) => {
     next({ ...rest, type: type + FAILURE, error });
   }
 };
+
+export default api;
