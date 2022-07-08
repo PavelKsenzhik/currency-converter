@@ -14,8 +14,8 @@ input[type=number] {
 .count-picker{
     &__input{
         font-size: $input-font;
-        margin-top: 16px;
-        padding: 16px 32px 16px 8px;
+        margin: 32px 0px;
+        padding: 16px 106px 16px 16px;
         border: none;
         border-bottom: 3px solid $main-color;
         outline: none;

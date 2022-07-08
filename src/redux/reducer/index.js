@@ -4,8 +4,10 @@ import rates from './rates';
 import day from './day';
 import rate from './rate';
 
-export default combineReducers({
+const appReducer = combineReducers({
     rates,
     day,
     rate,
 })
+
+export default appReducer;

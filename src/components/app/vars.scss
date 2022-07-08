@@ -3,5 +3,18 @@ $secondary-color: #f8db95;
 $input-color: rgba(174, 174, 174, 0.116);
 $hover-color: rgba(169, 169, 169, 0.356);
 $footer-color: #fff;
-
 $input-font: 24px;
+
+@mixin flagSize{
+    height: 48px;
+    width: 64px;
+}
+
+@mixin secondaryFlagSize{
+    height: 40px;
+    width: 56px;
+}
+
+@mixin inputPadding{
+    padding: 16px 32px 16px 84px;
+}

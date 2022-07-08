@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { connect } from 'react-redux';
+import { Navigate, Link }  from 'react-router-dom';
 import AbbrPicker from "../abbrPicker";
 import CountPicker from "../countPicker";
 import Loader from '../loader';
@@ -10,7 +11,7 @@ import "flatpickr/dist/themes/material_red.css";
 
 import './currencyPannel.scss'
 
-import { loadRates, setDay } from '../../redux/actions'
+import { loadRates, resetStore, setDay } from '../../redux/actions'
 import { activeRatesSelector, daySelector, rateSelector, ratesLoadedSelector, ratesLoadingSelector } from "../../redux/selectors";
 
 
@@ -25,7 +26,7 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, activeR
     
     useEffect(() =>{
         if(!loading && !loaded) loadRates()
-    }, [loading, loaded, loadRates])
+    }, [loadRates])
 
 
     useEffect(() =>{
@@ -38,9 +39,9 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, activeR
         if(loaded) loadRates()
     },[day, loadRates])
 
-    console.log(`${++count} render`);
+    // console.log(`${++count} render`);
     if(loading) return <Loader />;
-    if(!loaded) return 'No data =(';
+    if(!loaded) return 'Что-то пошло не так. Необходимо обновить страницу'
 
     function handleBynAmountChange(bynAmount) {
         if(bynAmount === '' || bynAmount === 0){
@@ -67,15 +68,14 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, activeR
             <h1 className="currency-pannel__title">Калькулятор валют</h1>
             <div className="currency-pannel__items">
                 <div className="currency-pannel__item">
-                    <AbbrPicker />
+                    <AbbrPicker disabled={true}/>
                     <CountPicker value={bynAmount} setter={handleBynAmountChange}/>
                 </div>
                 <div className="currency-pannel__item">
                     <AbbrPicker rates={activeRates}/>
                     <CountPicker value={currAmount} setter={handleCurrAmountChange}/>
                 </div>
-            </div>
-            <div className="currency-pannel__item">
+                <div className="currency-pannel__item">
                 <Flarpickr 
                     value={day}
                     onChange={(day) => {
@@ -91,6 +91,7 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, activeR
                         },
                     }}
                 />
+            </div>
             </div>
         </div>
     )

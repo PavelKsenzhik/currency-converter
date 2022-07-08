@@ -9,7 +9,6 @@ const api = (store) => (next) => async (action) => {
 
   // Memoization 
   const day = daySelector(store.getState())
-  
   if (store.getState().rates.entities.hasOwnProperty(day)) {
     const rate = store.getState().rates.entities[day].USD.Cur_OfficialRate;
     next(setRate(rate))
