@@ -133,10 +133,10 @@ export default function FlagSelector({ attr }) {
 <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-jp" viewBox="0 0 640 480">
   <defs>
     <clipPath id="jp-a">
-      <path fill-opacity=".7" d="M-88 32h640v480H-88z"/>
+      <path fillOpacity=".7" d="M-88 32h640v480H-88z"/>
     </clipPath>
   </defs>
-  <g fill-rule="evenodd" stroke-width="1pt" clip-path="url(#jp-a)" transform="translate(88 -32)">
+  <g fillRule="evenodd" strokeWidth="1pt" clipPath="url(#jp-a)" transform="translate(88 -32)">
     <path fill="#fff" d="M-128 32h720v480h-720z"/>
     <circle cx="523.1" cy="344.1" r="194.9" fill="#d30000" transform="translate(-168.4 8.6) scale(.76554)"/>
   </g>
@@ -148,13 +148,13 @@ export default function FlagSelector({ attr }) {
 <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-ir" viewBox="0 0 640 480">
   <defs>
     <clipPath id="ir-a">
-      <path fill-opacity=".7" d="M-85.3 0h682.7v512H-85.3z"/>
+      <path fillOpacity=".7" d="M-85.3 0h682.7v512H-85.3z"/>
     </clipPath>
   </defs>
-  <g fill-rule="evenodd" clip-path="url(#ir-a)" transform="translate(80) scale(.9375)">
+  <g fillRule="evenodd" clipPath="url(#ir-a)" transform="translate(80) scale(.9375)">
     <path fill="#fff" d="M-192 0h896v512h-896z"/>
     <path fill="#da0000" d="M-192 343.8h896V512h-896z"/>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M-21.6 351h49v3.3h-49zm7.3 16.8h3.4v3.3h-3.4zm41.9 0v3.3h-9.8v-3.4zm5.2-16.8h3.4v20h-3.4z"/>
       <path d="M52.4 367.7v3.4H33.8v-3.4zm-34.6-7.9H21v11.3h-3.3z"/>
       <path d="M49.6 351H53v20h-3.4zm-8.4 0h3.3v20h-3.3zm-44.8 8v3.4h-18V359zm39.3 0v3.4h-18V359z"/>
@@ -163,7 +163,7 @@ export default function FlagSelector({ attr }) {
       <path d="M17.8 359.9H21V371h-3.3zm-39.3 0h3.3V371h-3.3zm28.8 0h3.4V371H7.3zm-14.3 0h3.4V371H-7z"/>
       <path d="M9.6 367.7v3.4H-5.5v-3.4zm1-8.7v3.4H1V359z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M-102.2 351h49v3.3h-49zm7.3 16.8h3.4v3.3H-95zm41.9 0v3.3h-9.8v-3.4zm5.2-16.8h3.4v20h-3.4z"/>
       <path d="M-28.2 367.7v3.4h-18.6v-3.4zm-34.6-7.9h3.3v11.3h-3.3z"/>
       <path d="M-31 351h3.4v20H-31zm-8.4 0h3.3v20h-3.3zm-44.8 8v3.4h-18V359zm39.3 0v3.4h-18V359z"/>
@@ -172,7 +172,7 @@ export default function FlagSelector({ attr }) {
       <path d="M-62.8 359.9h3.3V371h-3.3zm-39.3 0h3.3V371h-3.3zm28.8 0h3.3V371h-3.3zm-14.3 0h3.4V371h-3.4z"/>
       <path d="M-71 367.7v3.4h-15v-3.4zm1-8.7v3.4h-9.6V359z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M58.3 351h49v3.3h-49zm7.3 16.8H69v3.3h-3.4zm41.9 0v3.3h-9.8v-3.4zm5.3-16.8h3.4v20h-3.4z"/>
       <path d="M132.3 367.7v3.4h-18.6v-3.4zm-34.6-7.9h3.4v11.3h-3.4z"/>
       <path d="M129.5 351h3.4v20h-3.4zm-8.4 0h3.4v20H121zm-44.8 8v3.4h-18V359zm39.3 0v3.4h-18V359z"/>
@@ -181,7 +181,7 @@ export default function FlagSelector({ attr }) {
       <path d="M97.7 359.9h3.4V371h-3.4zm-39.3 0h3.4V371h-3.4zm28.8 0h3.4V371h-3.4zm-14.3 0h3.4V371h-3.4z"/>
       <path d="M89.6 367.7v3.4H74.4v-3.4zm1-8.7v3.4H81V359z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M622.7 351h49v3.3h-49zm7.3 16.8h3.4v3.3H630zm41.9 0v3.3H662v-3.4zm5.3-16.8h3.3v20h-3.4z"/>
       <path d="M696.7 367.7v3.4H678v-3.4zm-34.6-7.9h3.4v11.3H662z"/>
       <path d="M694 351h3.3v20h-3.4zm-8.5 0h3.4v20h-3.4zm-44.8 8v3.4h-18V359zm39.3 0v3.4h-18V359z"/>
@@ -190,7 +190,7 @@ export default function FlagSelector({ attr }) {
       <path d="M662 359.9h3.5V371H662zm-39.2 0h3.4V371h-3.4zm28.8 0h3.4V371h-3.4zm-14.3 0h3.4V371h-3.4z"/>
       <path d="M654 367.7v3.4h-15.2v-3.4zm1-8.7v3.4h-9.6V359z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M138.7 351h49.1v3.3h-49zm7.4 16.8h3.3v3.3h-3.3zm41.8 0v3.3h-9.8v-3.4zm5.3-16.8h3.4v20h-3.4z"/>
       <path d="M212.8 367.7v3.4h-18.6v-3.4zm-34.7-7.9h3.4v11.3h-3.4z"/>
       <path d="M210 351h3.4v20H210zm-8.5 0h3.4v20h-3.4zm-44.8 8v3.4h-17.9V359zm39.3 0v3.4h-17.9V359z"/>
@@ -199,7 +199,7 @@ export default function FlagSelector({ attr }) {
       <path d="M178.1 359.9h3.4V371h-3.4zm-39.3 0h3.4V371h-3.4zm28.8 0h3.4V371h-3.4zm-14.2 0h3.3V371h-3.3z"/>
       <path d="M170 367.7v3.4h-15.1v-3.4zm1-8.7v3.4h-9.6V359z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M219.5 351h49v3.3h-49zm7.3 16.8h3.4v3.3h-3.4zm41.9 0v3.3h-9.8v-3.4zM274 351h3.3v20H274z"/>
       <path d="M293.5 367.7v3.4h-18.6v-3.4zm-34.6-7.9h3.4v11.3h-3.4z"/>
       <path d="M290.7 351h3.4v20h-3.4zm-8.4 0h3.4v20h-3.4zm-44.8 8v3.4h-18V359zm39.3 0v3.4h-18V359z"/>
@@ -209,7 +209,7 @@ export default function FlagSelector({ attr }) {
       <path d="M250.8 367.7v3.4h-15.2v-3.4zm1-8.7v3.4H242V359z"/>
     </g>
     <path fill="#239f40" d="M-192 0h896v168.2h-896z"/>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M300.7 351h49v3.3h-49zm7.3 16.8h3.4v3.3H308zm41.9 0v3.3H340v-3.4zm5.3-16.8h3.3v20h-3.3z"/>
       <path d="M374.7 367.7v3.4h-18.6v-3.4zm-34.6-7.9h3.4v11.3H340z"/>
       <path d="M372 351h3.3v20H372zm-8.5 0h3.4v20h-3.4zm-44.8 8v3.4h-18V359zm39.3 0v3.4h-18V359z"/>
@@ -218,7 +218,7 @@ export default function FlagSelector({ attr }) {
       <path d="M340 359.9h3.5V371H340zm-39.2 0h3.4V371h-3.4zm28.8 0h3.4V371h-3.4zm-14.3 0h3.4V371h-3.4z"/>
       <path d="M332 367.7v3.4h-15.2v-3.4zm1-8.7v3.4h-9.6V359z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M381.4 351h49v3.3h-49zm7.3 16.8h3.4v3.3h-3.4zm42 0v3.3h-9.9v-3.4zm5.2-16.8h3.4v20h-3.4z"/>
       <path d="M455.4 367.7v3.4h-18.6v-3.4zm-34.6-7.9h3.4v11.3h-3.4z"/>
       <path d="M452.7 351h3.3v20h-3.3zm-8.5 0h3.4v20h-3.4zm-44.8 8v3.4h-17.9V359zm39.3 0v3.4h-17.9V359z"/>
@@ -227,7 +227,7 @@ export default function FlagSelector({ attr }) {
       <path d="M420.8 359.9h3.4V371h-3.4zm-39.3 0h3.4V371h-3.4zm28.8 0h3.4V371h-3.4zm-14.3 0h3.4V371h-3.3z"/>
       <path d="M412.7 367.7v3.4h-15.1v-3.4zm1-8.7v3.4H404V359z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M462.2 351h49v3.3h-49zm7.3 16.8h3.4v3.3h-3.4zm41.9 0v3.3h-9.8v-3.4zm5.2-16.8h3.4v20h-3.4z"/>
       <path d="M536.2 367.7v3.4h-18.6v-3.4zm-34.7-7.9h3.4v11.3h-3.4z"/>
       <path d="M533.4 351h3.4v20h-3.4zm-8.4 0h3.3v20H525zm-44.8 8v3.4h-18V359zm39.3 0v3.4h-18V359z"/>
@@ -236,7 +236,7 @@ export default function FlagSelector({ attr }) {
       <path d="M501.6 359.9h3.3V371h-3.3zm-39.4 0h3.4V371h-3.4zm28.9 0h3.3V371h-3.3zm-14.3 0h3.4V371h-3.4z"/>
       <path d="M493.4 367.7v3.4h-15.1v-3.4zm1-8.7v3.4h-9.6V359z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M543.4 351h49v3.3h-49zm7.3 16.8h3.4v3.3h-3.4zm41.9 0v3.3h-9.8v-3.4zm5.2-16.8h3.4v20h-3.4z"/>
       <path d="M617.4 367.7v3.4h-18.6v-3.4zm-34.6-7.9h3.3v11.3h-3.3z"/>
       <path d="M614.6 351h3.4v20h-3.4zm-8.4 0h3.3v20h-3.3zm-44.8 8v3.4h-18V359zm39.3 0v3.4h-18V359z"/>
@@ -245,7 +245,7 @@ export default function FlagSelector({ attr }) {
       <path d="M582.8 359.9h3.3V371h-3.3zm-39.3 0h3.3V371h-3.3zm28.8 0h3.4V371h-3.4zm-14.3 0h3.4V371H558z"/>
       <path d="M574.6 367.7v3.4h-15.1v-3.4zm1-8.7v3.4H566V359z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M-183.8 351h49v3.3h-49zm7.3 16.8h3.4v3.3h-3.4zm42 0v3.3h-9.9v-3.4zm5.2-16.8h3.4v20h-3.4z"/>
       <path d="M-109.8 367.7v3.4h-18.6v-3.4zm-34.6-7.9h3.4v11.3h-3.4z"/>
       <path d="M-112.5 351h3.3v20h-3.3zm-8.5 0h3.4v20h-3.4zm-44.8 8v3.4h-17.9V359zm39.3 0v3.4h-17.9V359z"/>
@@ -254,7 +254,7 @@ export default function FlagSelector({ attr }) {
       <path d="M-144.4 359.9h3.4V371h-3.4zm-39.3 0h3.4V371h-3.4zm28.8 0h3.4V371h-3.4zm-14.3 0h3.4V371h-3.4z"/>
       <path d="M-152.5 367.7v3.4h-15.2v-3.4zm1-8.7v3.4h-9.6V359z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M-21.6 143.4h49v3.4h-49zm7.3 17h3.4v3.2h-3.4zm41.9-.2v3.4h-9.8v-3.4zm5.2-16.8h3.4v20.2h-3.4z"/>
       <path d="M52.4 160.2v3.4H33.8v-3.4zm-34.6-7.9H21v11.3h-3.3z"/>
       <path d="M49.6 143.4H53v20.2h-3.4zm-8.4 0h3.3v20.2h-3.3zm-44.8 8v3.4h-18v-3.3zm39.3 0v3.4h-18v-3.3z"/>
@@ -263,7 +263,7 @@ export default function FlagSelector({ attr }) {
       <path d="M17.8 152.3H21v11.3h-3.3zm-39.3 0h3.3v11.3h-3.3zm28.8 0h3.4v11.3H7.3zm-14.3 0h3.4v11.3H-7z"/>
       <path d="M9.6 160.2v3.4H-5.5v-3.4zm1-8.7v3.3H1v-3.3z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M-102.2 143.4h49v3.4h-49zm7.3 17h3.4v3.2H-95zm41.9-.2v3.4h-9.8v-3.4zm5.2-16.8h3.4v20.2h-3.4z"/>
       <path d="M-28.2 160.2v3.4h-18.6v-3.4zm-34.6-7.9h3.3v11.3h-3.3z"/>
       <path d="M-31 143.4h3.4v20.2H-31zm-8.4 0h3.3v20.2h-3.3zm-44.8 8v3.4h-18v-3.3zm39.3 0v3.4h-18v-3.3z"/>
@@ -272,7 +272,7 @@ export default function FlagSelector({ attr }) {
       <path d="M-62.8 152.3h3.3v11.3h-3.3zm-39.3 0h3.3v11.3h-3.3zm28.8 0h3.3v11.3h-3.3zm-14.3 0h3.4v11.3h-3.4z"/>
       <path d="M-71 160.2v3.4h-15v-3.4zm1-8.7v3.3h-9.6v-3.3z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M58.3 143.4h49v3.4h-49zm7.3 17H69v3.2h-3.4zm41.9-.2v3.4h-9.8v-3.4zm5.3-16.8h3.4v20.2h-3.4z"/>
       <path d="M132.3 160.2v3.4h-18.6v-3.4zm-34.6-7.9h3.4v11.3h-3.4z"/>
       <path d="M129.5 143.4h3.4v20.2h-3.4zm-8.4 0h3.4v20.2H121zm-44.8 8v3.4h-18v-3.3zm39.3 0v3.4h-18v-3.3z"/>
@@ -281,7 +281,7 @@ export default function FlagSelector({ attr }) {
       <path d="M97.7 152.3h3.4v11.3h-3.4zm-39.3 0h3.4v11.3h-3.4zm28.8 0h3.4v11.3h-3.4zm-14.3 0h3.4v11.3h-3.4z"/>
       <path d="M89.6 160.2v3.4H74.4v-3.4zm1-8.7v3.3H81v-3.3z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M622.7 143.4h49v3.4h-49zm7.3 17h3.4v3.2H630zm41.9-.2v3.4H662v-3.4zm5.3-16.8h3.3v20.2h-3.4z"/>
       <path d="M696.7 160.2v3.4H678v-3.4zm-34.6-7.9h3.4v11.3H662z"/>
       <path d="M694 143.4h3.3v20.2h-3.4zm-8.5 0h3.4v20.2h-3.4zm-44.8 8v3.4h-18v-3.3zm39.3 0v3.4h-18v-3.3z"/>
@@ -290,7 +290,7 @@ export default function FlagSelector({ attr }) {
       <path d="M662 152.3h3.5v11.3H662zm-39.2 0h3.4v11.3h-3.4zm28.8 0h3.4v11.3h-3.4zm-14.3 0h3.4v11.3h-3.4z"/>
       <path d="M654 160.2v3.4h-15.2v-3.4zm1-8.7v3.3h-9.6v-3.3z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M138.7 143.4h49.1v3.4h-49zm7.4 17h3.3v3.2h-3.3zm41.8-.2v3.4h-9.8v-3.4zm5.3-16.8h3.4v20.2h-3.4z"/>
       <path d="M212.8 160.2v3.4h-18.6v-3.4zm-34.7-7.9h3.4v11.3h-3.4z"/>
       <path d="M210 143.4h3.4v20.2H210zm-8.5 0h3.4v20.2h-3.4zm-44.8 8v3.4h-17.9v-3.3zm39.3 0v3.4h-17.9v-3.3z"/>
@@ -299,7 +299,7 @@ export default function FlagSelector({ attr }) {
       <path d="M178.1 152.3h3.4v11.3h-3.4zm-39.3 0h3.4v11.3h-3.4zm28.8 0h3.4v11.3h-3.4zm-14.2 0h3.3v11.3h-3.3z"/>
       <path d="M170 160.2v3.4h-15.1v-3.4zm1-8.7v3.3h-9.6v-3.3z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M219.5 143.4h49v3.4h-49zm7.3 17h3.4v3.2h-3.4zm41.9-.2v3.4h-9.8v-3.4zm5.3-16.8h3.3v20.2H274z"/>
       <path d="M293.5 160.2v3.4h-18.6v-3.4zm-34.6-7.9h3.4v11.3h-3.4z"/>
       <path d="M290.7 143.4h3.4v20.2h-3.4zm-8.4 0h3.4v20.2h-3.4zm-44.8 8v3.4h-18v-3.3zm39.3 0v3.4h-18v-3.3z"/>
@@ -308,7 +308,7 @@ export default function FlagSelector({ attr }) {
       <path d="M258.9 152.3h3.4v11.3h-3.4zm-39.3 0h3.3v11.3h-3.3zm28.8 0h3.4v11.3h-3.4zm-14.3 0h3.4v11.3H234z"/>
       <path d="M250.8 160.2v3.4h-15.2v-3.4zm1-8.7v3.3H242v-3.3z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M300.7 143.4h49v3.4h-49zm7.3 17h3.4v3.2H308zm41.9-.2v3.4H340v-3.4zm5.3-16.8h3.3v20.2h-3.3z"/>
       <path d="M374.7 160.2v3.4h-18.6v-3.4zm-34.6-7.9h3.4v11.3H340z"/>
       <path d="M372 143.4h3.3v20.2H372zm-8.5 0h3.4v20.2h-3.4zm-44.8 8v3.4h-18v-3.3zm39.3 0v3.4h-18v-3.3z"/>
@@ -317,7 +317,7 @@ export default function FlagSelector({ attr }) {
       <path d="M340 152.3h3.5v11.3H340zm-39.2 0h3.4v11.3h-3.4zm28.8 0h3.4v11.3h-3.4zm-14.3 0h3.4v11.3h-3.4z"/>
       <path d="M332 160.2v3.4h-15.2v-3.4zm1-8.7v3.3h-9.6v-3.3z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M381.4 143.4h49v3.4h-49zm7.3 17h3.4v3.2h-3.4zm42-.2v3.4h-9.9v-3.4zm5.2-16.8h3.4v20.2h-3.4z"/>
       <path d="M455.4 160.2v3.4h-18.6v-3.4zm-34.6-7.9h3.4v11.3h-3.4z"/>
       <path d="M452.7 143.4h3.3v20.2h-3.3zm-8.5 0h3.4v20.2h-3.4zm-44.8 8v3.4h-17.9v-3.3zm39.3 0v3.4h-17.9v-3.3z"/>
@@ -326,7 +326,7 @@ export default function FlagSelector({ attr }) {
       <path d="M420.8 152.3h3.4v11.3h-3.4zm-39.3 0h3.4v11.3h-3.4zm28.8 0h3.4v11.3h-3.4zm-14.3 0h3.4v11.3h-3.3z"/>
       <path d="M412.7 160.2v3.4h-15.1v-3.4zm1-8.7v3.3H404v-3.3z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M462.2 143.4h49v3.4h-49zm7.3 17h3.4v3.2h-3.4zm41.9-.2v3.4h-9.8v-3.4zm5.2-16.8h3.4v20.2h-3.4z"/>
       <path d="M536.2 160.2v3.4h-18.6v-3.4zm-34.7-7.9h3.4v11.3h-3.4z"/>
       <path d="M533.4 143.4h3.4v20.2h-3.4zm-8.4 0h3.3v20.2H525zm-44.8 8v3.4h-18v-3.3zm39.3 0v3.4h-18v-3.3z"/>
@@ -335,7 +335,7 @@ export default function FlagSelector({ attr }) {
       <path d="M501.6 152.3h3.3v11.3h-3.3zm-39.4 0h3.4v11.3h-3.4zm28.9 0h3.3v11.3h-3.3zm-14.3 0h3.4v11.3h-3.4z"/>
       <path d="M493.4 160.2v3.4h-15.1v-3.4zm1-8.7v3.3h-9.6v-3.3z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M543.4 143.4h49v3.4h-49zm7.3 17h3.4v3.2h-3.4zm41.9-.2v3.4h-9.8v-3.4zm5.2-16.8h3.4v20.2h-3.4z"/>
       <path d="M617.4 160.2v3.4h-18.6v-3.4zm-34.6-7.9h3.3v11.3h-3.3z"/>
       <path d="M614.6 143.4h3.4v20.2h-3.4zm-8.4 0h3.3v20.2h-3.3zm-44.8 8v3.4h-18v-3.3zm39.3 0v3.4h-18v-3.3z"/>
@@ -344,7 +344,7 @@ export default function FlagSelector({ attr }) {
       <path d="M582.8 152.3h3.3v11.3h-3.3zm-39.3 0h3.3v11.3h-3.3zm28.8 0h3.4v11.3h-3.4zm-14.3 0h3.4v11.3H558z"/>
       <path d="M574.6 160.2v3.4h-15.1v-3.4zm1-8.7v3.3H566v-3.3z"/>
     </g>
-    <g fill="#fff" stroke-width="1pt">
+    <g fill="#fff" strokeWidth="1pt">
       <path d="M-183.8 143.4h49v3.4h-49zm7.3 17h3.4v3.2h-3.4zm42-.2v3.4h-9.9v-3.4zm5.2-16.8h3.4v20.2h-3.4z"/>
       <path d="M-109.8 160.2v3.4h-18.6v-3.4zm-34.6-7.9h3.4v11.3h-3.4z"/>
       <path d="M-112.5 143.4h3.3v20.2h-3.3zm-8.5 0h3.4v20.2h-3.4zm-44.8 8v3.4h-17.9v-3.3zm39.3 0v3.4h-17.9v-3.3z"/>
@@ -353,8 +353,8 @@ export default function FlagSelector({ attr }) {
       <path d="M-144.4 152.3h3.4v11.3h-3.4zm-39.3 0h3.4v11.3h-3.4zm28.8 0h3.4v11.3h-3.4zm-14.3 0h3.4v11.3h-3.4z"/>
       <path d="M-152.5 160.2v3.4h-15.2v-3.4zm1-8.7v3.3h-9.6v-3.3z"/>
     </g>
-    <path fill="#d90000" stroke-width="1pt" d="M-68.8 339.5h6V350h-6zm160.5 0h6V350h-6zm-283.7 0h6V350h-6zm81.5 0h6V350h-6zm80.9 0h6V350h-6zm40 0h6V350h-6zm40.9 0h6V350h-6zm80.4 0h6V350h-6zm203 0h6.1V350h-6zm-162.1 0h6V350h-6zm40 0h6V350h-6zm40.5 0h6V350h-6zm40.4 0h6V350h-6zm323.2 0h6V350h-6zm-242.7 0h6V350h-6zm40.8 0h6V350h-6zm41.3 0h6V350h-6zm38.8 0h6V350h-6zm41.3 0h6V350h-6zm40.4 0h6V350h-6zm119.7 0h6V350h-6zm-38.8 0h6V350h-6zm-808.9 0h6V350h-6z"/>
-    <path fill="#239e3f" stroke-width="1pt" d="M-68.8 162.6h6v10.5h-6zm160.5 0h6v10.5h-6zm-283.7 0h6v10.5h-6zm81.5 0h6v10.5h-6zm80.9 0h6v10.5h-6zm40 0h6v10.5h-6zm40.9 0h6v10.5h-6zm80.4 0h6v10.5h-6zm203 0h6.1v10.5h-6zm-162.1 0h6v10.5h-6zm40 0h6v10.5h-6zm40.5 0h6v10.5h-6zm40.4 0h6v10.5h-6zm323.2 0h6v10.5h-6zm-242.7 0h6v10.5h-6zm40.8 0h6v10.5h-6zm41.3 0h6v10.5h-6zm38.8 0h6v10.5h-6zm41.3 0h6v10.5h-6zm40.4 0h6v10.5h-6zm119.7 0h6v10.5h-6zm-38.8 0h6v10.5h-6zm-808.9 0h6v10.5h-6z"/>
+    <path fill="#d90000" strokeWidth="1pt" d="M-68.8 339.5h6V350h-6zm160.5 0h6V350h-6zm-283.7 0h6V350h-6zm81.5 0h6V350h-6zm80.9 0h6V350h-6zm40 0h6V350h-6zm40.9 0h6V350h-6zm80.4 0h6V350h-6zm203 0h6.1V350h-6zm-162.1 0h6V350h-6zm40 0h6V350h-6zm40.5 0h6V350h-6zm40.4 0h6V350h-6zm323.2 0h6V350h-6zm-242.7 0h6V350h-6zm40.8 0h6V350h-6zm41.3 0h6V350h-6zm38.8 0h6V350h-6zm41.3 0h6V350h-6zm40.4 0h6V350h-6zm119.7 0h6V350h-6zm-38.8 0h6V350h-6zm-808.9 0h6V350h-6z"/>
+    <path fill="#239e3f" strokeWidth="1pt" d="M-68.8 162.6h6v10.5h-6zm160.5 0h6v10.5h-6zm-283.7 0h6v10.5h-6zm81.5 0h6v10.5h-6zm80.9 0h6v10.5h-6zm40 0h6v10.5h-6zm40.9 0h6v10.5h-6zm80.4 0h6v10.5h-6zm203 0h6.1v10.5h-6zm-162.1 0h6v10.5h-6zm40 0h6v10.5h-6zm40.5 0h6v10.5h-6zm40.4 0h6v10.5h-6zm323.2 0h6v10.5h-6zm-242.7 0h6v10.5h-6zm40.8 0h6v10.5h-6zm41.3 0h6v10.5h-6zm38.8 0h6v10.5h-6zm41.3 0h6v10.5h-6zm40.4 0h6v10.5h-6zm119.7 0h6v10.5h-6zm-38.8 0h6v10.5h-6zm-808.9 0h6v10.5h-6z"/>
     <g fill="#da0000">
       <path d="M279.8 197.5c8.4 10.4 34.5 67.6-15.7 105.2-23.7 17.8-9 18.6-8.3 21.6 38-20.1 50.3-47.5 50-72-.2-24.4-13.2-46-26-54.8z"/>
       <path d="M284.8 194.8a73.3 73.3 0 0115.7 112.4c27.2-6 62-86.4-15.7-112.4zm-57.6 0a73.3 73.3 0 00-15.6 112.4c-27.3-6-62-86.4 15.6-112.4z"/>
@@ -585,10 +585,10 @@ export default function FlagSelector({ attr }) {
 <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-kg" viewBox="0 0 640 480">
   <defs>
     <clipPath id="kg-a">
-      <path fill-opacity=".7" d="M-85 0h682.7v512H-85z"/>
+      <path fillOpacity=".7" d="M-85 0h682.7v512H-85z"/>
     </clipPath>
   </defs>
-  <g fill-rule="evenodd" clip-path="url(#kg-a)" transform="translate(79.6) scale(.9375)">
+  <g fillRule="evenodd" clipPath="url(#kg-a)" transform="translate(79.6) scale(.9375)">
     <path fill="#be0027" d="M-128 0h768.8v512H-128z"/>
     <path fill="#ff0" d="M105.5 261.1c13.6-16.6 41.9-.4 65-12.3-27.4 1.5-42.3-13.2-63.9-11.1 22.4-13.8 41.5 4.5 66.5-2.8-33.1-2.8-31.7-17.7-61.9-19.8 26.8-11.4 40 11.8 66.3 6.5-31-7.1-35-25.3-58-29.2 33.6-5 31.4 14.8 64.3 17.2-33.4-14.3-24.7-26.8-52.6-37.7 31.3-.7 29.2 21 61 26.6-27.2-17.2-23.9-32.9-46.2-45.2 26.5.5 29 27.6 56.1 36-24.1-19.1-17.8-35.3-38.6-52.4 26.4 6.2 22.5 29.6 50 44.6-20.4-22.6-12.6-38.8-30.3-57.3 25.4 8.1 15.7 30.4 42 51.6-15-24.9-5.7-40.8-20.6-61.7 23.6 12.1 12.2 34.9 34 57.5-10.3-25.5 0-41.3-10.5-63.9 20.2 15 8.2 39.3 24.5 62.5-6-32 7.8-37.2 3.5-65.2 15.3 18.8-1.8 37.6 10 65.3-1.5-31.5 15.3-38.8 12.4-64 15.1 22.6-8.5 42.3 1.4 66.5 2.5-29.8 22.1-37.6 22.4-60.8 12 21.3-14 36.7-9.8 65 8.5-31.2 29.4-35 32-56 7.1 24.6-21.4 36-19.7 63.4 8.5-27.7 34.6-31 40-51.4 3.3 26-22.4 30.7-29.7 59.5 13.5-23.5 37.2-25.4 47.8-44-.8 25.8-29.8 29.2-38.7 53.3 16.7-20.5 37.7-17 54.4-35.1-1.8 23.3-31.3 22-47 46.1 18.1-16.7 45.4-11.7 59.3-26.1-.7 20.6-36.9 19-54 37.5 21-11.6 47.8-4.8 63.2-15.5-2.8 18-41 13.8-59.3 28 25.2-7 44.7 3.7 65-4-9.9 17.5-44.6 6.4-63 17.8 22-3.7 45.2 9.6 65.1 5.3-6.5 15.2-44.6-1-65 8.5 24.4-.2 40.3 15.5 63 14.4-12.3 13.8-45.7-5.1-65.2-1.9 23.8 5 42 24.6 60 25.6-14.9 11.3-42.5-14.5-65-11.3 23.2 6.2 42.6 32.5 55.8 33.1-14.3 9.8-42.5-22.5-61.8-21.3 23.5 10.6 34.2 37.5 49.7 41.3-19.1 6.1-37.9-29.2-58.4-30.5 23.8 15 25.1 38 43.4 48.2-19.3 4.7-33-35.2-53.3-38.6 19.5 14.3 22.5 45 35.4 54.6-19.6 1-26.7-40.7-46.8-46.7 17.2 14.4 13.1 45.6 26.5 59-20.4-4.3-17.8-40.6-39.1-52.9 15.3 19.4 7.5 46.9 17.5 62.4-19.9-8-11.3-40.6-30.2-59 10.3 20.6-.8 44.6 7.4 64.5-18.2-8.9-6-47.4-19.9-62.7 6.4 23.8-5.4 43.5-.6 64.8-18.6-21.5 2.8-43.2-13.3-65.1 4.2 25.1-13.4 42.7-10.6 63.7-14.7-17.2 8-44.7-3.5-66.4 2.4 24.7-20.3 46.4-18.7 62-12-20 13.3-43.6 6.5-66.3-1.4 23.6-24.4 36.4-28.7 57.9-7.7-23.7 19.6-40.8 17.2-64.1-7.8 22.1-30 31-37.8 52.5-6.4-23.7 26-36.2 26.8-61-10 23.2-36.5 28.4-45.3 46.2-3.3-23.5 33.8-34 35.2-56.3-12 21.4-41 22.3-51 39.3-1.5-23.4 37.6-26.3 43.7-50.8-11.9 18.2-43.7 15.9-57 30.7 2.1-21.7 44.4-23 51.2-42.6-15.8 15.2-45 9-61.5 21 9.2-21.4 48.9-16.9 57.8-32.3-17.5 9.1-48.6.2-64 9.4 14-20.2 44.8-8.1 62.3-22-28.4 4.1-45.5-7.2-65.2-2z"/>
     <path fill="#ff0" d="M356 256.1a99.2 99.2 0 11-198.5 0 99.2 99.2 0 01198.4 0z"/>
@@ -684,10 +684,10 @@ export default function FlagSelector({ attr }) {
                 <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-sg" viewBox="0 0 640 480">
   <defs>
     <clipPath id="a">
-      <path fill-opacity=".7" d="M0 0h640v480H0z"/>
+      <path fillOpacity=".7" d="M0 0h640v480H0z"/>
     </clipPath>
   </defs>
-  <g fill-rule="evenodd" clip-path="url(#a)">
+  <g fillRule="evenodd" clipPath="url(#a)">
     <path fill="#fff" d="M-20 0h720v480H-20z"/>
     <path fill="#df0000" d="M-20 0h720v240H-20z"/>
     <path fill="#fff" d="M146 40.2a84.4 84.4 0 0 0 .8 165.2 86 86 0 0 1-106.6-59 86 86 0 0 1 59-106c16-4.6 30.8-4.7 46.9-.2z"/>
