@@ -1,8 +1,6 @@
-import { ReactComponent as Icon } from '../../../icons/flags/ad.svg';
 import FlagSelector from '../flagSelector';
 
-
-import './abbrItem.scss'
+import './abbrItem.scss';
 
 function AbbItem({ rate, setActiveFlag, setStatusInput, setFilterText }) {
     const { Cur_Name, Cur_Abbreviation } = rate;
