@@ -1,4 +1,4 @@
-import { setRate } from '../actions';
+import { setCurr, setRate } from '../actions';
 import { FAILURE, REQUEST, SUCCESS } from '../constants';
 import { daySelector } from '../selectors';
 
@@ -8,10 +8,11 @@ const api = (store) => (next) => async (action) => {
   const { CallAPI, type, ...rest } = action;
 
   // Memoization 
-  const day = daySelector(store.getState())
-  if (store.getState().rates.entities.hasOwnProperty(day)) {
-    const rate = store.getState().rates.entities[day].USD.Cur_OfficialRate;
-    next(setRate(rate))
+  const day = daySelector(store.getState());
+  const rates = store.getState().rates.entities;
+  if (rates.hasOwnProperty(day)) {
+    const rate = rates[day].USD.Cur_OfficialRate;
+    next(setRate(rate));
     return 
   }
 
@@ -20,8 +21,10 @@ const api = (store) => (next) => async (action) => {
     const data = await fetch(`${CallAPI}&ondate=${day}`).then((res) => res.json());
     next({ ...rest, type: type + SUCCESS, data });
     
+    const activeCurr = data.find(item => item.Cur_Abbreviation === store.getState().currency.abbr)
+    console.log(activeCurr, 'api');
     // Set new Rate
-    next(setRate(data[5].Cur_OfficialRate))
+    next(setCurr(activeCurr.Cur_Abbreviation, activeCurr.Cur_Scale, activeCurr.Cur_OfficialRate))
   } catch (error) {
     next({ ...rest, type: type + FAILURE, error });
   }

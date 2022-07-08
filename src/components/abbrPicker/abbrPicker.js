@@ -1,10 +1,12 @@
 import { Fragment, useState } from "react";
+import { connect } from 'react-redux';
 import AbbrItem from "./abbrItem";
 import FlagSelector from "./flagSelector";
 
 import './abbrPicker.scss';
+import { setCurr, setRate } from "../../redux/actions";
 
-function AbbrPicker({ rates, disabled }) {
+function AbbrPicker({ rates, disabled, setRate}) {
 
     const [statusInput, setStatusInput] = useState(false);
     const [filterText, setFilterText] = useState('Доллар США');
@@ -44,7 +46,7 @@ function AbbrPicker({ rates, disabled }) {
                             return rate
                         }
                     }).map(rate => {
-                        return <AbbrItem key={rate.Cur_ID} rate={rate} setActiveFlag={setActiveFlag} setStatusInput={setStatusInput} setFilterText={setFilterText}/>
+                        return <AbbrItem key={rate.Cur_ID} rate={rate} setRate={setRate} setActiveFlag={setActiveFlag} setStatusInput={setStatusInput} setFilterText={setFilterText}/>
                     }) :
                     <Fragment></Fragment>
                 }
@@ -54,4 +56,12 @@ function AbbrPicker({ rates, disabled }) {
     )
 }
 
-export default AbbrPicker;
+const mapStateToProps = (state) => ({
+
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    setRate: (rate) => dispatch(setRate(rate)),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps )(AbbrPicker);
