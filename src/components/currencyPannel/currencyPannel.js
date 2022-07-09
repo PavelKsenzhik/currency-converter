@@ -9,7 +9,9 @@ import { Russian } from "flatpickr/dist/l10n/ru.js"
 
 import "flatpickr/dist/themes/material_red.css";
 
-import './currencyPannel.scss'
+
+import './flatpickr.scss';
+import './currencyPannel.scss';
 
 import { loadRates, setDay } from '../../redux/actions'
 import { daySelector, rateSelector, ratesLoadedSelector, ratesLoadingSelector } from "../../redux/selectors";

@@ -18,7 +18,7 @@ function AbbrPicker({ activeRates, disabled, acvtiveAbbr, activeName}) {
 
                 {disabled ?
                     <Fragment>
-                        <FlagSelector attr={'BYN'} />
+                        <FlagSelector  attr={'BYN'} />
                         <input className=" abbr-picker__input abbr-picker__input_disabled" type="text" value={"Белорусский рубль"} disabled={disabled} />
                     </Fragment>
                     :

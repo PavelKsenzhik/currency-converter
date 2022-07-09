@@ -8,3 +8,13 @@
     align-items: center;
     background: $main-color;
 }
+
+@media (max-width: 460px) {
+    .header{
+        text-align: center;
+        &__logo{
+            width: 80%;
+        }
+
+    }
+}

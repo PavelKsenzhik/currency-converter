@@ -1,6 +1,5 @@
 @import '../app/vars.scss';
 
-// Remove arrow of Input type="number"
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -33,5 +32,33 @@ input[type=number] {
             border-radius: 5px 5px 0px 0px;
         }
     }
+}
+
+@media (max-width: 720px) {
+  .count-picker{
+    &__input{
+      width: 400px;
+    }
+  }
+}
+
+// @media (max-width: 480px) {
+//   .count-picker{
+//     &__input{
+//       width: 307px;
+//     }
+//   }
+// }
+
+@media (max-width: 600px) {
+  .count-picker{
+    width: 100%;
+    &__input{
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      padding: 16px 32px;
+    }
+  }
 }
 

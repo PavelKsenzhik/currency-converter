@@ -58,14 +58,13 @@
 
 // Styles for scroll-bar
 
-/* полоса прокрутки (скроллбар) */
 ::-webkit-scrollbar {
-    width: 24px; /* ширина для вертикального скролла */
-    height: 8px; /* высота для горизонтального скролла */
+    width: 24px; 
+    height: 8px; 
     background-color: $hover-color;
 }
 
-/* ползунок скроллбара */
+
 ::-webkit-scrollbar-thumb {
     background-color: $main-color;
 }
@@ -73,8 +72,6 @@
 ::-webkit-scrollbar-thumb:hover {
     background-color: $secondary-color;
 }
-
-/* Стрелки */
 
 ::-webkit-scrollbar-button:vertical:start:decrement {
     background:
@@ -91,4 +88,44 @@
         linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
     background-color: #f6f8f4;
 }
+
+@media (max-width: 720px) {
+    .abbr-picker{
+        &__input{
+            width: 400px;
+        }
+    }
+}
+
+
+// @media (max-width: 480px) {
+//     .abbr-picker{
+//         &__input{
+//             width: 307px;
+//         }
+//     }
+// }
+
+@media (max-width: 600px) {
+    .abbr-picker{
+        &__input-wrapper svg {
+            height: 34px;
+            width: 50px;
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translate(0, -50%);
+        }
+        &__input{
+            font-size: 18px;
+            display: block;
+            width: 100%;
+            &::placeholder {
+                font-size: 18px;
+                color: $font-color;
+            }
+        }
+    }
+}
+
 

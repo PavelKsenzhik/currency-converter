@@ -24,3 +24,12 @@
         margin: 0;
     }
 }
+
+@media (max-width: 600px) {
+    .abbr-item{
+        &__flag{
+            height: 18px;
+            width: 34px;
+        }
+    }
+}
