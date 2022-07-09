@@ -1,4 +1,4 @@
-import { LOAD_RATES, SET_DAY, SET_RATE } from "./constants";
+import { LOAD_RATES, SET_CURR, SET_DAY, SET_RATE } from "./constants";
 
 
 export const loadRates = () => ({
@@ -11,7 +11,7 @@ export const setDay = (day) => ({
     day: day,
 })
 
-export const setRate = (rate) => ({
-    type: SET_RATE,
+export const setCurr = (rate) => ({
+    type: SET_CURR,
     rate: rate,
 })

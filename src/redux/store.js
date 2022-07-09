@@ -4,11 +4,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import api from './middleware/api'
 
-import reducer from './reducer';
+import appReducer from './reducer';
 
 const enhancer = applyMiddleware(
     thunk,
     api,
 )
 
-export default createStore(reducer, composeWithDevTools(enhancer));
+export default createStore(appReducer, composeWithDevTools(enhancer));

@@ -2,10 +2,12 @@ import { combineReducers } from 'redux';
 
 import rates from './rates';
 import day from './day';
-import rate from './rate';
+import currency from './currency'
 
-export default combineReducers({
+const appReducer = combineReducers({
     rates,
     day,
-    rate,
+    currency,
 })
+
+export default appReducer;

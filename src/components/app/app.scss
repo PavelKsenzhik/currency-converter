@@ -12,12 +12,11 @@
 .container{
     display: flex;
     flex-grow: 1;
-    width: 1600px;
-    border: 2px solid #f8db95;
+    width: 1400px;
     padding: 8px 24px;
 }
 
-@media(max-width: 1660px) {
+@media(max-width: 1400px) {
     .container{
         width: 100%;
     }

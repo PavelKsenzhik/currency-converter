@@ -1,4 +1,4 @@
-export default function(unformattedDate){
+export default function formatDate (unformattedDate){
     if(!unformattedDate) return;
     
     let date = unformattedDate;

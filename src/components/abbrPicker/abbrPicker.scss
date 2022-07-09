@@ -1,0 +1,136 @@
+@import '../app/vars.scss';
+
+.abbr-picker {
+    position: relative;
+
+    &__input-wrapper svg {
+        @include flagSize();
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translate(0, -50%);
+    }
+    &__control-icon {
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        transform: translate(0, -50%);
+    }
+    &__control-icon svg{
+        width: 28px;
+        height: 28px;
+        &:hover path{
+            fill: $main-color;
+        }
+    }
+
+    &__items {
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 0px 5px $block-border-color;
+        position: absolute;
+        max-height: 300px;
+        overflow: auto;
+        z-index: 10;
+        border-radius: 0px 0px 6px 6px;
+    }
+}
+
+.abbr-picker__input {
+    font-size: 24px;
+    @include inputPadding();
+    border: 3px solid rgba(134, 31, 65, 0);
+    border-bottom: 3px solid #861F41;
+    outline: none;
+    transition-duration: 0.1s;
+    border-radius: 6px 6px 0px 0px;
+    text-overflow: ellipsis;
+    &:hover {
+        background-color: $hover-color;
+    }
+
+    &:focus{
+        background-color: $input-color;
+        box-shadow: 0px 0px 5px $block-border-color;
+    }
+
+    &::placeholder {
+        font-size: 24px;
+        color: $font-color;
+    }
+
+    &_disabled {
+        border: 3px solid rgba(134, 31, 65, 0);
+        background: none;
+        color: $font-color;
+        &:hover {
+            background-color: #FFF;
+        }
+    }
+}
+
+
+// Styles for scroll-bar
+
+::-webkit-scrollbar {
+    width: 24px; 
+    height: 8px; 
+    background-color: $hover-color;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: $main-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $secondary-color;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background:
+        linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background:
+        linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+}
+
+
+@media (max-width: 768px) {
+    .abbr-picker{
+        &__input-wrapper svg {
+            height: 34px;
+            width: 50px;
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translate(0, -50%);
+        }
+        &__input{
+            font-size: 18px;
+            display: block;
+            width: 100%;
+            &::placeholder {
+                font-size: 18px;
+                color: $font-color;
+            }
+        }
+        &__items {
+            max-height: 300px;
+        }
+        &__control-icon svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+
