@@ -14,36 +14,31 @@ import './flatpickr.scss';
 import './currencyPannel.scss';
 
 import { loadRates, setDay } from '../../redux/actions'
-import { daySelector, rateSelector, ratesLoadedSelector, ratesLoadingSelector } from "../../redux/selectors";
+import { daySelector, rateSelector, ratesErrorSelector, ratesLoadedSelector, ratesLoadingSelector } from "../../redux/selectors";
 
-
-// DEV ONLY
-let count = 0;
-
-function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate }) {
+function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, error }) {
 
     const today = new Date().setHours(0, 0, 0, 0);
     const [currAmount, setCurrAmout] = useState(1);
     const [bynAmount, setBynAmount] = useState(rate * currAmount);
 
+    // Loading Data
     useEffect(() => {
         if (!loading && !loaded) loadRates()
     }, [loadRates])
 
-
+    // Init first render
     useEffect(() => {
         if (!!rate) {
             handleCurrAmountChange(1)
         }
     }, [rate]);
-
+    // Rerender if day changed
     useEffect(() => {
         if (loaded) loadRates()
     }, [day, loadRates])
 
-    console.log(`${++count} render`);
-    if (loading) return <Loader />;
-    if (!loaded) return 'Что-то пошло не так. Необходимо обновить страницу'
+    if(error) alert(`Ошибка ${error}. Попробуйте обновить страницу`);
 
     function handleBynAmountChange(bynAmount) {
         if (bynAmount === '' || bynAmount === 0) {
@@ -106,6 +101,7 @@ const mapStateToProps = (state) => ({
     loaded: ratesLoadedSelector(state),
     day: daySelector(state),
     rate: rateSelector(state),
+    error: ratesErrorSelector(state),
 })
 
 const mapDispatchToProps = (dispatch) => ({

@@ -10,6 +10,19 @@
         left: 16px;
         transform: translate(0, -50%);
     }
+    &__control-icon {
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        transform: translate(0, -50%);
+    }
+    &__control-icon svg{
+        width: 28px;
+        height: 28px;
+        &:hover path{
+            fill: $main-color;
+        }
+    }
 
     &__items {
         width: 100%;
@@ -31,6 +44,7 @@
     outline: none;
     transition-duration: 0.1s;
     border-radius: 6px 6px 0px 0px;
+    text-overflow: ellipsis;
     &:hover {
         background-color: $hover-color;
     }
@@ -89,24 +103,8 @@
     background-color: #f6f8f4;
 }
 
-@media (max-width: 720px) {
-    .abbr-picker{
-        &__input{
-            width: 400px;
-        }
-    }
-}
 
-
-// @media (max-width: 480px) {
-//     .abbr-picker{
-//         &__input{
-//             width: 307px;
-//         }
-//     }
-// }
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .abbr-picker{
         &__input-wrapper svg {
             height: 34px;
@@ -124,6 +122,13 @@
                 font-size: 18px;
                 color: $font-color;
             }
+        }
+        &__items {
+            max-height: 300px;
+        }
+        &__control-icon svg{
+            width: 20px;
+            height: 20px;
         }
     }
 }

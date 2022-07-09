@@ -5,6 +5,7 @@ const initialState = {
     Cur_Scale: 1,
     Cur_OfficialRate: 1,
     Cur_Name: '',
+    Cur_Date: '',
 }
 
 const currency = (state = initialState, action) => {
@@ -19,6 +20,7 @@ const currency = (state = initialState, action) => {
                 Cur_Scale: rate.Cur_Scale,
                 Cur_OfficialRate: rate.Cur_OfficialRate / rate.Cur_Scale,
                 Cur_Name: rate.Cur_Name,
+                Cur_Date: rate.Cur_Date,
             })
         default:
             return state

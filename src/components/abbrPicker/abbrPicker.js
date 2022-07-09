@@ -2,10 +2,13 @@ import { Fragment, useState } from "react";
 import { connect } from 'react-redux';
 import AbbrItem from "./abbrItem";
 import FlagSelector from "./flagSelector";
+import { activeAbbrSelector, activeNameSelector, activeRatesSelector } from "../../redux/selectors";
+import { ReactComponent as CloseIcon } from '../../icons/close.svg';
+import { ReactComponent as SearchIcon } from '../../icons/search.svg'
 
 import './abbrPicker.scss';
 
-import { activeAbbrSelector, activeNameSelector, activeRatesSelector } from "../../redux/selectors";
+
 
 function AbbrPicker({ activeRates, disabled, acvtiveAbbr, activeName}) {
 
@@ -23,7 +26,6 @@ function AbbrPicker({ activeRates, disabled, acvtiveAbbr, activeName}) {
                     </Fragment>
                     :
                     <Fragment>
-                        {                                   }
                         <FlagSelector attr={acvtiveAbbr} />
                         <input type="text"
                             className="abbr-picker__input"
@@ -33,7 +35,12 @@ function AbbrPicker({ activeRates, disabled, acvtiveAbbr, activeName}) {
                                 setStatusInput(!statusInput)
                                 setFilterText('');
                             }}
-                            onChange={(ev) => setFilterText(ev.target.value)} />
+                            onChange={(ev) => setFilterText(ev.target.value)} 
+                        />
+                        { statusInput ? <div className="abbr-picker__control-icon" onClick={() => {setStatusInput(false); setFilterText('')}}> <CloseIcon />    
+                        </div> : <div className="abbr-picker__control-icon" onClick={() => {setStatusInput(true); setFilterText('')}}> <SearchIcon />    
+                        </div>}
+
                     </Fragment>
                 }
             </div>

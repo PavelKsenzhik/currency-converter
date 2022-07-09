@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { connect } from 'react-redux';
-import { setCurr, setRate } from '../../../redux/actions';
+import { setCurr } from '../../../redux/actions';
 
 import FlagSelector from '../flagSelector';
 
