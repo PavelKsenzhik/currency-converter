@@ -11,14 +11,7 @@ export const setDay = (day) => ({
     day: day,
 })
 
-export const setRate = (rate) => ({
-    type: SET_RATE,
-    rate: rate,
-})
-
-export const setCurr = (abbr, scale, rate) => ({
+export const setCurr = (rate) => ({
     type: SET_CURR,
-    abbr: abbr,
-    scale: scale,
     rate: rate,
 })
