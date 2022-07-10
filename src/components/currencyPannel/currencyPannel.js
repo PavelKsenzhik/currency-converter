@@ -1,27 +1,34 @@
 import { useState, useEffect } from "react";
 import { connect } from 'react-redux';
-import { Navigate, Link } from 'react-router-dom';
 import AbbrPicker from "../abbrPicker";
 import CountPicker from "../countPicker";
-import Loader from '../loader';
 import Flatpickr from 'react-flatpickr';
 import { Russian } from "flatpickr/dist/l10n/ru.js"
+import { loadRates, setPrevData } from '../../redux/actions'
+import { 
+    daySelector, 
+    prevBynAmountSelector, 
+    prevCurrAmountSelector, 
+    rateSelector, 
+    ratesErrorSelector, 
+    ratesLoadedSelector, 
+    ratesLoadingSelector 
+} from "../../redux/selectors";
+
 
 import "flatpickr/dist/themes/material_red.css";
-
 
 import './flatpickr.scss';
 import './currencyPannel.scss';
 
-import { loadRates, setDay } from '../../redux/actions'
-import { daySelector, rateSelector, ratesErrorSelector, ratesLoadedSelector, ratesLoadingSelector } from "../../redux/selectors";
+let count = 0;
 
-function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, error }) {
+function CurrencyPannel({ loadRates, setPrevData, loading, loaded, day, rate, error, prevBynAmount, prevCurrAmount }) {
 
     const today = new Date().setHours(0, 0, 0, 0);
     const [currAmount, setCurrAmout] = useState(1);
-    const [bynAmount, setBynAmount] = useState(rate * currAmount);
-
+    const [bynAmount, setBynAmount] = useState(rate * prevCurrAmount);
+    console.log(++count, 'render');
     // Loading Data
     useEffect(() => {
         if (!loading && !loaded) loadRates()
@@ -30,15 +37,16 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, error }
     // Init first render
     useEffect(() => {
         if (!!rate) {
-            handleCurrAmountChange(1)
+            handleCurrAmountChange(prevCurrAmount)
         }
     }, [rate]);
+
     // Rerender if day changed
     useEffect(() => {
-        if (loaded) loadRates()
+        if (loaded) loadRates();
     }, [day, loadRates])
 
-    if(error) alert(`Ошибка ${error}. Попробуйте обновить страницу`);
+    if (error) alert(`Ошибка ${error}. Попробуйте обновить страницу`);
 
     function handleBynAmountChange(bynAmount) {
         if (bynAmount === '' || bynAmount === 0) {
@@ -46,8 +54,8 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, error }
             setCurrAmout('');
             return;
         }
-        setCurrAmout(bynAmount / (1 * rate));
-        setBynAmount(bynAmount)
+        setCurrAmout(+bynAmount / (1 * rate));
+        setBynAmount(+bynAmount)
     }
 
     function handleCurrAmountChange(currAmountReturned) {
@@ -56,8 +64,8 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, error }
             setBynAmount('')
             return;
         }
-        setBynAmount(currAmountReturned * rate);
-        setCurrAmout(currAmountReturned)
+        setBynAmount(+currAmountReturned * rate);
+        setCurrAmout(+currAmountReturned)
     }
 
     return (
@@ -78,7 +86,7 @@ function CurrencyPannel({ loadRates, setDay, loading, loaded, day, rate, error }
                     <Flatpickr
                         value={day}
                         onChange={(day) => {
-                            setDay(day[0]);
+                            setPrevData(day[0], +bynAmount, +currAmount);
                         }}
                         options={{
                             mode: 'single',
@@ -102,11 +110,13 @@ const mapStateToProps = (state) => ({
     day: daySelector(state),
     rate: rateSelector(state),
     error: ratesErrorSelector(state),
+    prevBynAmount: prevBynAmountSelector(state),
+    prevCurrAmount: prevCurrAmountSelector(state),
 })
 
 const mapDispatchToProps = (dispatch) => ({
     loadRates: () => dispatch(loadRates()),
-    setDay: (day) => dispatch(setDay(day)),
+    setPrevData: (day, bynAmount, currAmount) => dispatch(setPrevData(day, bynAmount, currAmount)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CurrencyPannel);

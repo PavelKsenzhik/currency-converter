@@ -1,7 +1,9 @@
 
 export const ratesSelector = (state) => state.rates.entities;
 export const rateSelector = (state) => state.currency.Cur_OfficialRate;
-export const daySelector = (state) => state.day;
+export const daySelector = (state) => state.prevData.day;
+export const prevBynAmountSelector = (state) => state.prevData.prevBynAmount;
+export const prevCurrAmountSelector = (state) => state.prevData.prevCurrAmount;
 
 export const ratesLoadingSelector = (state) => state.rates.loading;
 export const ratesLoadedSelector = (state) => state.rates.loaded;

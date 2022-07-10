@@ -1,4 +1,4 @@
-import { LOAD_RATES, SET_CURR, SET_DAY, SET_RATE } from "./constants";
+import { LOAD_RATES, SET_CURR, SET_DAY } from "./constants";
 
 
 export const loadRates = () => ({
@@ -6,9 +6,11 @@ export const loadRates = () => ({
     CallAPI: 'https://www.nbrb.by/api/exrates/rates?periodicity=0',
 });
 
-export const setDay = (day) => ({
+export const setPrevData = (day, prevBynAmount, prevCurrAmount) => ({
     type: SET_DAY,
     day: day,
+    prevBynAmount: prevBynAmount,
+    prevCurrAmount:  prevCurrAmount,
 })
 
 export const setCurr = (rate) => ({
