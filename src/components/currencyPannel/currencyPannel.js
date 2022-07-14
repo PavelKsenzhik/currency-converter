@@ -86,11 +86,11 @@ function CurrencyPannel({ loadRates, setPrevData, loading, loaded, day, rate, er
                 <div className="currency-pannel__input-pickers">
                     <div className="currency-pannel__picker">
                         <AbbrPicker disabled={true} />
-                        <CountPicker value={bynAmount} setter={handleBynAmountChange} сurr={"BYN"} setActiveCurr={setActiveCurr}/>
+                        <CountPicker value={bynAmount} setter={handleBynAmountChange} curr={"BYN"} setActiveCurr={setActiveCurr}/>
                     </div>
                     <div className="currency-pannel__picker">
                         <AbbrPicker />
-                        <CountPicker value={currAmount} setter={handleCurrAmountChange} сurr={"USD"} setActiveCurr={setActiveCurr}/>
+                        <CountPicker value={currAmount} setter={handleCurrAmountChange} curr={"USD"} setActiveCurr={setActiveCurr}/>
                     </div>
                 </div>
                 <div className="currency-pannel__flatpickr">
