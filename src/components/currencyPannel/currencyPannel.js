@@ -21,14 +21,15 @@ import "flatpickr/dist/themes/material_red.css";
 import './flatpickr.scss';
 import './currencyPannel.scss';
 
-let count = 0;
+
 
 function CurrencyPannel({ loadRates, setPrevData, loading, loaded, day, rate, error, prevBynAmount, prevCurrAmount }) {
 
     const today = new Date().setHours(0, 0, 0, 0);
     const [currAmount, setCurrAmout] = useState(1);
     const [bynAmount, setBynAmount] = useState(rate * prevCurrAmount);
-    console.log(++count, 'render');
+    const [activeField, setActiveField] = useState('USD');
+
     // Loading Data
     useEffect(() => {
         if (!loading && !loaded) loadRates()
@@ -37,10 +38,20 @@ function CurrencyPannel({ loadRates, setPrevData, loading, loaded, day, rate, er
     // Init first render
     useEffect(() => {
         if (!!rate) {
-            handleCurrAmountChange(prevCurrAmount)
+            switch(activeField){
+                case "USD":
+                    handleCurrAmountChange(prevCurrAmount);
+                    break;
+                case "BYN":
+                    handleBynAmountChange(prevBynAmount);
+                    break;
+                default:
+                    break;
+            }
+            
         }
     }, [rate]);
-
+    
     // Rerender if day changed
     useEffect(() => {
         if (loaded) loadRates();
@@ -75,11 +86,11 @@ function CurrencyPannel({ loadRates, setPrevData, loading, loaded, day, rate, er
                 <div className="currency-pannel__input-pickers">
                     <div className="currency-pannel__picker">
                         <AbbrPicker disabled={true} />
-                        <CountPicker value={bynAmount} setter={handleBynAmountChange} />
+                        <CountPicker value={bynAmount} setter={handleBynAmountChange} field={"BYN"} setActiveField={setActiveField}/>
                     </div>
                     <div className="currency-pannel__picker">
                         <AbbrPicker />
-                        <CountPicker value={currAmount} setter={handleCurrAmountChange} />
+                        <CountPicker value={currAmount} setter={handleCurrAmountChange} field={"USD"} setActiveField={setActiveField}/>
                     </div>
                 </div>
                 <div className="currency-pannel__flatpickr">
