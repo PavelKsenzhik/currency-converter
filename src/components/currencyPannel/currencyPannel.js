@@ -28,17 +28,17 @@ function CurrencyPannel({ loadRates, setPrevData, loading, loaded, day, rate, er
     const today = new Date().setHours(0, 0, 0, 0);
     const [currAmount, setCurrAmout] = useState(1);
     const [bynAmount, setBynAmount] = useState(rate * prevCurrAmount);
-    const [activeField, setActiveField] = useState('USD');
+    const [activeCurr, setActiveCurr] = useState('USD');
 
     // Loading Data
     useEffect(() => {
         if (!loading && !loaded) loadRates()
     }, [loadRates])
 
-    // Init first render
+    // Init rerender if rate changed
     useEffect(() => {
         if (!!rate) {
-            switch(activeField){
+            switch(activeCurr){
                 case "USD":
                     handleCurrAmountChange(prevCurrAmount);
                     break;
@@ -86,11 +86,11 @@ function CurrencyPannel({ loadRates, setPrevData, loading, loaded, day, rate, er
                 <div className="currency-pannel__input-pickers">
                     <div className="currency-pannel__picker">
                         <AbbrPicker disabled={true} />
-                        <CountPicker value={bynAmount} setter={handleBynAmountChange} field={"BYN"} setActiveField={setActiveField}/>
+                        <CountPicker value={bynAmount} setter={handleBynAmountChange} сurr={"BYN"} setActiveCurr={setActiveCurr}/>
                     </div>
                     <div className="currency-pannel__picker">
                         <AbbrPicker />
-                        <CountPicker value={currAmount} setter={handleCurrAmountChange} field={"USD"} setActiveField={setActiveField}/>
+                        <CountPicker value={currAmount} setter={handleCurrAmountChange} сurr={"USD"} setActiveCurr={setActiveCurr}/>
                     </div>
                 </div>
                 <div className="currency-pannel__flatpickr">
